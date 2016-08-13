@@ -2,7 +2,7 @@
 - hosts: all
   sudo: yes
   vars:
-    agent_version: 0.8.2
+    agent_version: 1.0.2
     rancher_server: "{{ RANCHER_SERVER }}"
     rancher_port: "{{ RANCHER_PORT }}"
     api_user: "{{ API_USER }}"

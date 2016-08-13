@@ -1,7 +1,7 @@
 ---
 - hosts: all
   vars:
-    server_version: 0.56.1
+    server_version: stable
     rancher_server: "{{ RANCHER_SERVER }}"
     rancher_port: "{{ RANCHER_PORT }}"
     admin_user: "{{ ADMIN_USER }}"
@@ -43,7 +43,7 @@
   - name: Pull and run Rancher server container
     docker:
       name: rancherserver
-      image: rancher/server:v{{ server_version }}
+      image: rancher/server:{{ server_version }}
       state: reloaded
       restart_policy: always
       detach: True
